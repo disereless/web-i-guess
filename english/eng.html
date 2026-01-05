@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harith's Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="engstyle.css">
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+
+</head>
+<body>
+
+
+    <!-- CRT scanline effect -->
+    <div class="scanlines"></div>
+    
+    <!-- Main terminal content -->
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-header-content">
+                <div class="prompt blink">></div>
+                <form id="header-search-form" class="header-search-form" action="#" onsubmit="return false;">
+                    <label id="search-prefix" class="search-prefix">C:\Users\DISERELESS\</label>
+                    <input id="header-search-input" class="header-search-input" type="text" autocomplete="off" />
+                    <span class="cursor-mini" aria-hidden="true"></span>
+                </form>
+            </div>
+            <button class="hamburger-menu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <div class="terminal-content">
+            <!-- Home Section (Default) -->
+            <div id="home" class="content-section active">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span><a id="texts-color"> WELCOME TO MY WEBSITE </a><span class="blink">#</span></h3>
+                    <p>I Will Teach You Alot About Games Glitches...</p>
+                    <p>Use The Menu For Navigation.</p>
+                    
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">USER NAME: HARITH</h3>
+                    <p><strong>Specialization:</strong> Video Game Glitch Analysis & Tutorials</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">MISSION STATEMENT</h3>
+                    <p>I like to Make a Tutorials abt Games Glitches & Hidden Tricks</p>
+                    <p>Current focus: God of War. For Now</p>
+                </div>
+                
+
+
+
+
+
+
+
+
+                <div class="info-box">
+                        <h3 class="info-title">YOUTUBE SUBSCRIBERS</h3>
+                        <p><span class="blink">></span> Subscribers: <span id="subscriber-count" style="color: #ffff00;">Loading...</span></p>
+                    </div>
+            </div>
+            
+            <!-- Profile Section -->
+            <div id="profile" class="content-section">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span> USER PROFILE <span class="blink">#</span></h3>
+                    <p></p>
+                </div>
+                
+                <div class="info-box">
+                    
+                    <!-- Personal Information toggle list -->
+                    <ul class="expandable-list">
+                        <li>
+                            <div class="expandable-item" data-target="personal-info">
+                                <span class="toggle-icon">▶</span> PERSONAL INFORMATION
+                        </li>
+                        <div class="hidden-info" id="personal-info">
+                            <div class="info-content" style="padding: 20px;">
+                                <img src="IMAGES/EA2.png" alt="Harith Profile" style="max-width: 200px; display: block; margin: 0 0 15px 0; border: 2px solid #00aa00;">
+                                <p><strong>Name:</strong> Harith</p>
+                                <p><strong>Nick-Name:</strong> disereless</p>
+                                <p><strong>Age:</strong> 20</p>
+                                <p><strong>Gender:</strong> Male</p>
+                                <p><strong>Location:</strong> iraq</p>
+                                <p><strong>Primary Platform:</strong> YouTube</p>
+                                <p><strong>Join Date:</strong> 24/2/2020</p>
+                                <p><strong>Status:</strong> Disappeared </p>
+                                <p><strong>Last online:</strong> 9 Months ago</p>
+                            </div>
+
+                        
+                    </ul>
+                </div>
+
+                
+                <div class="info-box">
+
+                    <ul class="expandable-list">
+                        <!-- What I use to play -->
+                        <li>
+                            <div class="expandable-item" data-target="play-setup">
+                                <span class="toggle-icon">▶</span> My Setup
+                        </li>
+                        <div class="hidden-info" id="play-setup">
+                            <div class="info-content">
+                                <p></p>
+                                <ul>
+                                    <li>Gpu: Rtx 3060 12gb</li>
+                                    <li>Cpu: R5 3600xt</li>
+                                    <li>Ram: 16 3200hz</li>
+                                    <li>I have ps5 too btw</li>
+                                </ul>
+                            </div>
+                    
+                    </ul>
+
+                </div>
+                
+            </div>
+            
+            <!-- Tutorials Section -->
+            <div id="tutorials" class="content-section">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span> GLITCH TUTORIALS <span class="blink">#</span></h3>
+                    <p>Loading tutorial database... Select a category:</p>
+                </div>
+                
+                
+                <div class="info-box">
+    <h3 class="info-title">GAMES I'VE MADE TUTORIALS ABOUT <span class="blink-slow">▼</span></h3>
+    <p style="color:#00aa00; margin-bottom:15px; font-size:0.9rem;">
+        <span class="blink">></span> Click on any game to view detailed information
+    </p>
+    
+    <ul class="expandable-list">
+        <!-- God of War I -->
+        <li>
+            <div class="expandable-item" data-target="gow1-info">
+                <span class="toggle-icon">▶</span> God of War I
+            </div>
+            <div class="hidden-info" id="gow1-info">
+                <div class="info-content">
+                    <p><span class="highlight">Game:</span> God of War I (2005)</p>
+                    <p><span class="highlight">Platform:</span> PlayStation 2</p>
+                    <p><span class="highlight">Glitches Covered:</span></p>
+                    <ul>
+                        <li><a class="info-content" href="https://youtu.be/JmLd95jyO3c?si=HMGNt8VH2VkTMwCm" target="_blank">The Jump Glitch</a></li>
+                        <li><a class="info-content" href="https://youtu.be/nKeN-iOzbFQ?si=tg4EdHQqxQVDfYlo" target="_blank">Infinite Magic Trick</a></li>
+                        <li><a class="info-content" href="https://youtu.be/-KJjNp1WBsU?si=YoD5nxmO4QuehRuz" target="_blank">Unlock Everything With Cheatcode</a></li>
+                        <li><a class="info-content" href="https://youtu.be/7E_laEDAFtw?si=NZFvDulfAqBUUj_x" target="_blank">Infinite Red Orbs Glitch</a></li>
+                    </ul>
+                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">Completed - 4 videos</span></p>
+                    <p><span class="highlight">Last Update:</span> 1/1/2026</p>
+                </div>
+            </div>
+        </li>
+        
+        <!-- God of War II -->
+        <li>
+            <div class="expandable-item" data-target="gow2-info">
+                <span class="toggle-icon">▶</span> God of War II
+            </div>
+            <div class="hidden-info" id="gow2-info">
+                <div class="info-content">
+                    <p><span class="highlight">Game:</span> God of War II (2007)</p>
+                    <p><span class="highlight">Platform:</span> PlayStation 2</p>
+                    <p><span class="highlight">Glitches Covered:</span></p>
+                    <ul>
+                        <li><a class="info-content" href="https://youtu.be/FsUPmCKd4tc?si=_Nr2A0yTup6bedCJ" target="_blank">The Jump Glitch (Atlas Quake)</a></li>
+                        <li><a class="info-content" href="https://youtu.be/2A_nEvUU-qA?si=rEtYW50HCUOsit96" target="_blank">The Jump Glitch (Barbarian Hammer)</a></li>
+                        <li><a class="info-content" href="https://youtu.be/hWcBzW9I460?si=Noud7IBm9EpqrphS" target="_blank">My God of War2 speedrun</a></li>
+                        <li><a class="info-content" href="https://youtu.be/4HrHsupGRcc?si=hs6dnmsgy-IuW7vn" target="_blank">Unlock Everything With Cheatcode</a></li>
+                    </ul>
+                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">In Progress - 4 videos</span></p>
+                    <p><span class="highlight">Last Update:</span> 1/1/2026</p>
+                </div>
+            </div>
+        </li>
+        
+        <!-- God of War III -->
+        <li>
+            <div class="expandable-item" data-target="gow3-info">
+                <span class="toggle-icon">▶</span> God of War III
+            </div>
+            <div class="hidden-info" id="gow3-info">
+                <div class="info-content">
+                    <p><span class="highlight">Game:</span> God of War III (2010)</p>
+                    <p><span class="highlight">Platform:</span> PlayStation 3</p>
+                    <p><span class="highlight\">Glitches Covered:</span></p>
+                    <ul>
+                        <li><a class="info-content" href="https://youtu.be/GV9iThV4nao?si=IgnD4nH9galxVJGD" target="_blank">Sorrow Jump</a></li>
+                        <li><a class="info-content" href="https://youtube.com/shorts/SseO_VwFjN4?si=ZSjWyzYPzx_zAH39" target="_blank">Jet Dash</a></li>
+                        <li><a class="info-content" href="https://youtu.be/31qh6OW83ZE?si=tG0TxS9E8z82wOOw" target="_blank">New Game+ Glitch</a></li>
+                        <li><a class="info-content" href="https://youtu.be/EEZddWsC2W0?si=HIgOvbFb1OhtsxV1" target="_blank">Skip the Whole Game Glitch</a></li>
+                    </ul>
+                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">Completed - 4 videos</span></p>
+                    <p><span class="highlight">Last Update:</span> 1/1/2026</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+            </div>
+            
+            <!-- Saved Section -->
+            <div id="saved" class="content-section">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span> SAVED GLITCHES & FILES <span class="blink">#</span></h3>
+                    <p>Accessing archived glitch data...</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">BOOKMARKED GLITCHES</h3>
+                    <ul class="glitch-list">
+                        <li>The "Koopa Shell" Infinite Lives Trick (Super Mario Bros.)</li>
+                        <li>Zelda: Ocarina of Time - Getting the Sword Early</li>
+                        <li>Sonic the Hedgehog 2 - Debug Mode Activation</li>
+                        <li>Getting Mew in Pokémon Red/Blue (Without Gameshark)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">PERSONAL NOTES</h3>
+                    <p><strong>Observation:</strong> Most NES glitches relate to memory overflow or flag errors.</p>
+                    <p><strong>Hypothesis:</strong> Early 3D games have more physics-based glitches than 2D games.</p>
+                    <p><strong>Research Goal:</strong> Create a taxonomy of game glitches by cause and effect.</p>
+                    <p><strong>Current Project:</strong> Analyzing the correlation between game complexity and glitch frequency.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">FAVORITE SPEEDRUNS (GLITCH-HEAVY)</h3>
+                    <ul class="glitch-list">
+                        <li>Super Metroid - Any% (14:xx)</li>
+                        <li>The Legend of Zelda: Ocarina of Time - Any% (16:xx)</li>
+                        <li>Portal - Out of Bounds (4:xx)</li>
+                        <li>Dark Souls - Wrong Warp (25:xx)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div id="contact" class="content-section">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span> COMMUNICATION <span class="blink">#</span></h3>
+                    <p></p>
+                </div>
+                
+                <div class="webs-links">
+                    <h3 class="info-title">CONTACT INFORMATION</h3>
+                    <p class="contact-item"><span class="contact-icon"><i class="fa-solid fa-envelope"></i></span> <span class="contact-text">mmmarahmad125@gmail.com</span></p>
+                    <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-youtube"></i></span> <a class="webs-links" href="https://www.youtube.com/@disereless" target="_blank">https://www.youtube.com/@disereless</a></p>
+                    <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-x"></i></span> <a class="webs-links" href="https://x.com/disereless" target="_blank">https://x.com/disereless</a></p>
+                    <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-discord"></i></span> <span class="contact-text">Harth#7717</span></p>
+                    <p class="contact-item"><strong>Discord Server:</strong> <a class="webs-links" href="https://discord.gg/vc4D94EmzY" target="_blank">https://discord.gg/vc4D94EmzY</a></p>
+                </div>
+                
+                <!-- Submit A Glitch box removed per request -->
+            </div>
+        </div>
+        
+        <div class="terminal-footer">
+            <p>Harith's Website v1.0 | Last Updated: 31-12-2025 | follow me on youtube</p>
+        </div>
+    </div>
+    
+    <!-- Side menu -->
+    <div class="side-menu">
+        <div class="menu-title">NAVIGATION MENU</div>
+        <div class="menu-items">
+            <div class="menu-item active" data-target="home">
+                <i class="menu-icon fas fa-home"></i> HOME
+            </div>
+            <div class="menu-item" data-target="profile">
+                <i class="menu-icon fas fa-user"></i> PROFILE
+            </div>
+            <div class="menu-item" data-target="tutorials">
+                <i class="menu-icon fas fa-graduation-cap"></i> TUTORIALS
+            </div>
+            <div class="menu-item" data-target="saved">
+                <i class="menu-icon fas fa-save"></i> SAVED
+            </div>
+            <div class="menu-item" data-target="contact">
+                <i class="menu-icon fas fa-envelope"></i> CONTACT
+            </div>
+        </div>
+
+                <!-- Memory Bar -->
+        <div class="memory-bar">
+                <div class="memory-label">MEMORY USAGE</div>
+                <div class="bar-container">
+                    <div class="bar-fill" id="memory-fill"></div>
+                </div>
+            <div class="bar-text">42KB / 64KB</div>
+        </div>
+        
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px dashed #00aa00;">
+            <div class="info-box" style="background-color: #001a00; padding: 10px; margin-bottom: 10px;">
+                <h3 class="info-title" style="font-size: 1rem;">*</h3>
+                <p>You can also follow me on instagram. all my links are in contact section</p>
+
+            </div>
+            
+
+    <script src="engjava.js"></script>
+</body>
+</html>
