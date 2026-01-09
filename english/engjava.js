@@ -1,3 +1,101 @@
+// Terminal Loading Screen
+(function () {
+  // Check if user has visited before - only show loading screen on first visit
+  const showLoadingScreen = !localStorage.getItem("hasVisitedBefore");
+
+  if (showLoadingScreen) {
+    // First time visitor - show loading screen
+    document.addEventListener("DOMContentLoaded", function () {
+      const loadingScreen = document.getElementById("loading-screen");
+      const loadingText = document.getElementById("loading-text");
+      const loadingProgress = document.getElementById("loading-progress");
+
+      const bootMessages = [
+        { text: "> Initializing system...", delay: 100, type: "normal" },
+        { text: "> [OK] Memory check passed", delay: 80, type: "success" },
+        { text: "> Connecting to server...", delay: 100, type: "normal" },
+        { text: "> [OK] Connection established", delay: 80, type: "success" },
+        { text: "> [OK] User: DISERELESS", delay: 80, type: "success" },
+        { text: "> WELCOME TO HARITH'S TERMINAL", delay: 150, type: "success" },
+        {
+          text: "> System boot complete. Starting...",
+          delay: 200,
+          type: "success",
+        },
+      ];
+
+      let currentMessage = 0;
+      let totalMessages = bootMessages.length;
+
+      function typeMessage(message, callback) {
+        const line = document.createElement("div");
+        line.className = "line";
+
+        if (message.type === "success") line.classList.add("success-text");
+        else if (message.type === "warning") line.classList.add("warning-text");
+        else if (message.type === "error") line.classList.add("error-text");
+        else if (message.type === "info") line.classList.add("info-text");
+
+        loadingText.appendChild(line);
+
+        let charIndex = 0;
+        const typingSpeed = 15;
+
+        function typeChar() {
+          if (charIndex < message.text.length) {
+            line.textContent += message.text.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeChar, typingSpeed);
+          } else {
+            // Update progress bar
+            const progress = ((currentMessage + 1) / totalMessages) * 100;
+            loadingProgress.style.width = progress + "%";
+
+            setTimeout(callback, message.delay);
+          }
+        }
+
+        typeChar();
+
+        // Auto-scroll to bottom
+        loadingText.parentElement.scrollTop =
+          loadingText.parentElement.scrollHeight;
+      }
+
+      function showNextMessage() {
+        if (currentMessage < bootMessages.length) {
+          typeMessage(bootMessages[currentMessage], function () {
+            currentMessage++;
+            showNextMessage();
+          });
+        } else {
+          // All messages shown, hide loading screen
+          setTimeout(function () {
+            loadingScreen.classList.add("hidden");
+            // Mark as visited so loading screen won't show again
+            localStorage.setItem("hasVisitedBefore", "true");
+            // Remove loading screen from DOM after transition
+            setTimeout(function () {
+              loadingScreen.remove();
+            }, 500);
+          }, 800);
+        }
+      }
+
+      // Start the boot sequence
+      setTimeout(showNextMessage, 500);
+    });
+  } else {
+    // Returning visitor - hide loading screen immediately
+    document.addEventListener("DOMContentLoaded", function () {
+      const loadingScreen = document.getElementById("loading-screen");
+      if (loadingScreen) {
+        loadingScreen.remove();
+      }
+    });
+  }
+})();
+
 // كود لعرض/إخفاء المعلومات المخفية
 document.addEventListener("DOMContentLoaded", function () {
   // Hamburger menu toggle
@@ -28,9 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // YouTube Subscriber Counter
-  const YOUTUBE_API_KEY = "AIzaSyBjMzgc1Wbp06WCQ4aVp-q84W1BM7Cr1QM";
-  const CHANNEL_ID = "UC_Myh5uLQ53eyBGOrqkyjAw"; // Replace with your channel ID
 
   function fetchYouTubeSubscribers() {
     const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;

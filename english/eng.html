@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harith's Web</title>
+    <link rel="shortcut icon" href="IMAGES/H.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="engstyle.css">
 
@@ -22,6 +23,24 @@
 </head>
 <body>
 
+    <!-- Terminal Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-terminal">
+            <div class="loading-terminal-header">
+                <span class="loading-dot"></span>
+                <span class="loading-dot"></span>
+                <span class="loading-dot"></span>
+                <span class="loading-title">SYSTEM BOOT</span>
+            </div>
+            <div class="loading-terminal-body">
+                <div id="loading-text"></div>
+                <div class="loading-cursor">_</div>
+            </div>
+            <div class="loading-progress-container">
+                <div id="loading-progress" class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- CRT scanline effect -->
     <div class="scanlines"></div>
@@ -31,11 +50,8 @@
         <div class="terminal-header">
             <div class="terminal-header-content">
                 <div class="prompt blink">></div>
-                <form id="header-search-form" class="header-search-form" action="#" onsubmit="return false;">
-                    <label id="search-prefix" class="search-prefix">C:\Users\DISERELESS\</label>
-                    <input id="header-search-input" class="header-search-input" type="text" autocomplete="off" />
-                    <span class="cursor-mini" aria-hidden="true"></span>
-                </form>
+                <span class="search-prefix">C:\Users\DISERELESS\</span>
+                <span class="cursor-mini" aria-hidden="true"></span>
             </div>
             <button class="hamburger-menu" id="menu-toggle">
                 <span></span>
@@ -49,19 +65,14 @@
             <div id="home" class="content-section active">
                 <div class="welcome-message">
                     <h3><span class="blink">#</span><a id="texts-color"> WELCOME TO MY WEBSITE </a><span class="blink">#</span></h3>
-                    <p>I Will Teach You Alot About Games Glitches...</p>
                     <p>Use The Menu For Navigation.</p>
                     
                 </div>
                 
-                <div class="info-box">
-                    <h3 class="info-title">USER NAME: HARITH</h3>
-                    <p><strong>Specialization:</strong> Video Game Glitch Analysis & Tutorials</p>
-                </div>
                 
                 <div class="info-box">
-                    <h3 class="info-title">MISSION STATEMENT</h3>
-                    <p>I like to Make a Tutorials abt Games Glitches & Hidden Tricks</p>
+                    <h3 class="info-title">My MISSION STATEMENT</h3>
+                    <p>Making Tutorials about Games Glitches & Hidden Tricks</p>
                     <p>Current focus: God of War. For Now</p>
                 </div>
                 
@@ -75,7 +86,7 @@
 
                 <div class="info-box">
                         <h3 class="info-title">YOUTUBE SUBSCRIBERS</h3>
-                        <p><span class="blink">></span> Subscribers: <span id="subscriber-count" style="color: #ffff00;">Loading...</span></p>
+                        <p><span class="blink">></span> Subscribers: <span id="subscriber-count" style="color: #ffff00;">3900</span></p>
                     </div>
             </div>
             
@@ -147,7 +158,7 @@
                 
                 
                 <div class="info-box">
-    <h3 class="info-title">GAMES I'VE MADE TUTORIALS ABOUT <span class="blink-slow">▼</span></h3>
+    <h3 class="info-title">God of War Glitches<span class="blink-slow">▼</span></h3>
     <p style="color:#00aa00; margin-bottom:15px; font-size:0.9rem;">
         <span class="blink">></span> Click on any game to view detailed information
     </p>
@@ -169,7 +180,6 @@
                         <li><a class="info-content" href="https://youtu.be/-KJjNp1WBsU?si=YoD5nxmO4QuehRuz" target="_blank">Unlock Everything With Cheatcode</a></li>
                         <li><a class="info-content" href="https://youtu.be/7E_laEDAFtw?si=NZFvDulfAqBUUj_x" target="_blank">Infinite Red Orbs Glitch</a></li>
                     </ul>
-                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">Completed - 4 videos</span></p>
                     <p><span class="highlight">Last Update:</span> 1/1/2026</p>
                 </div>
             </div>
@@ -191,7 +201,6 @@
                         <li><a class="info-content" href="https://youtu.be/hWcBzW9I460?si=Noud7IBm9EpqrphS" target="_blank">My God of War2 speedrun</a></li>
                         <li><a class="info-content" href="https://youtu.be/4HrHsupGRcc?si=hs6dnmsgy-IuW7vn" target="_blank">Unlock Everything With Cheatcode</a></li>
                     </ul>
-                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">In Progress - 4 videos</span></p>
                     <p><span class="highlight">Last Update:</span> 1/1/2026</p>
                 </div>
             </div>
@@ -213,7 +222,6 @@
                         <li><a class="info-content" href="https://youtu.be/31qh6OW83ZE?si=tG0TxS9E8z82wOOw" target="_blank">New Game+ Glitch</a></li>
                         <li><a class="info-content" href="https://youtu.be/EEZddWsC2W0?si=HIgOvbFb1OhtsxV1" target="_blank">Skip the Whole Game Glitch</a></li>
                     </ul>
-                    <p><span class="highlight">Tutorial Status:</span> <span style="color:#ffff00">Completed - 4 videos</span></p>
                     <p><span class="highlight">Last Update:</span> 1/1/2026</p>
                 </div>
             </div>
@@ -222,42 +230,7 @@
 </div>
             </div>
             
-            <!-- Saved Section -->
-            <div id="saved" class="content-section">
-                <div class="welcome-message">
-                    <h3><span class="blink">#</span> SAVED GLITCHES & FILES <span class="blink">#</span></h3>
-                    <p>Accessing archived glitch data...</p>
-                </div>
-                
-                <div class="info-box">
-                    <h3 class="info-title">BOOKMARKED GLITCHES</h3>
-                    <ul class="glitch-list">
-                        <li>The "Koopa Shell" Infinite Lives Trick (Super Mario Bros.)</li>
-                        <li>Zelda: Ocarina of Time - Getting the Sword Early</li>
-                        <li>Sonic the Hedgehog 2 - Debug Mode Activation</li>
-                        <li>Getting Mew in Pokémon Red/Blue (Without Gameshark)</li>
-                    </ul>
-                </div>
-                
-                <div class="info-box">
-                    <h3 class="info-title">PERSONAL NOTES</h3>
-                    <p><strong>Observation:</strong> Most NES glitches relate to memory overflow or flag errors.</p>
-                    <p><strong>Hypothesis:</strong> Early 3D games have more physics-based glitches than 2D games.</p>
-                    <p><strong>Research Goal:</strong> Create a taxonomy of game glitches by cause and effect.</p>
-                    <p><strong>Current Project:</strong> Analyzing the correlation between game complexity and glitch frequency.</p>
-                </div>
-                
-                <div class="info-box">
-                    <h3 class="info-title">FAVORITE SPEEDRUNS (GLITCH-HEAVY)</h3>
-                    <ul class="glitch-list">
-                        <li>Super Metroid - Any% (14:xx)</li>
-                        <li>The Legend of Zelda: Ocarina of Time - Any% (16:xx)</li>
-                        <li>Portal - Out of Bounds (4:xx)</li>
-                        <li>Dark Souls - Wrong Warp (25:xx)</li>
-                    </ul>
-                </div>
-            </div>
-            
+
             <!-- Contact Section -->
             <div id="contact" class="content-section">
                 <div class="welcome-message">
@@ -269,12 +242,76 @@
                     <h3 class="info-title">CONTACT INFORMATION</h3>
                     <p class="contact-item"><span class="contact-icon"><i class="fa-solid fa-envelope"></i></span> <span class="contact-text">mmmarahmad125@gmail.com</span></p>
                     <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-youtube"></i></span> <a class="webs-links" href="https://www.youtube.com/@disereless" target="_blank">https://www.youtube.com/@disereless</a></p>
-                    <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-x"></i></span> <a class="webs-links" href="https://x.com/disereless" target="_blank">https://x.com/disereless</a></p>
+                    <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-instagram"></i></span> <a class="webs-links" href="https://www.instagram.com/disereless" target="_blank">https://www.instagram.com/disereless</a></p>
                     <p class="contact-item"><span class="contact-icon"><i class="fa-brands fa-discord"></i></span> <span class="contact-text">Harth#7717</span></p>
                     <p class="contact-item"><strong>Discord Server:</strong> <a class="webs-links" href="https://discord.gg/vc4D94EmzY" target="_blank">https://discord.gg/vc4D94EmzY</a></p>
                 </div>
                 
                 <!-- Submit A Glitch box removed per request -->
+            </div>
+
+            <!-- My Youtube Section -->
+            <div id="youtube" class="content-section">
+                <div class="welcome-message">
+                    <h3><span class="blink">#</span> MY YOUTUBE <span class="blink">#</span></h3>
+                    <p>Loading video database...</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3 class="info-title">MY VIDEO COLLECTION <span class="blink-slow">▼</span></h3>
+                    <p style="color:#00aa00; margin-bottom:15px; font-size:0.9rem;">
+                        <span class="blink">></span> Click on any thumbnail to watch the video
+                    </p>
+                    
+                    <div class="video-grid">
+                        <a href="https://youtu.be/WBPX0sm8v8k" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/WBPX0sm8v8k/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/mKZSxafzb1U" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/mKZSxafzb1U/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/L3Mip11jOrI" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/L3Mip11jOrI/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/kpUOy7VWrkw" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/kpUOy7VWrkw/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/hWcBzW9I460" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/hWcBzW9I460/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/bwWjIy849Mo" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/bwWjIy849Mo/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/fGWXyvljptQ" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/fGWXyvljptQ/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/xnigVzVXDfk" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/xnigVzVXDfk/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/SfFpQ8VDcG4" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/SfFpQ8VDcG4/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="https://youtu.be/0hP1M7rEnO0" target="_blank" class="video-item">
+                            <img src="https://img.youtube.com/vi/0hP1M7rEnO0/hqdefault.jpg" alt="Video Thumbnail">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                        </a>
+                    </div>
+                    
+                    <p style="margin-top: 20px; text-align: center;">
+                        <a href="https://www.youtube.com/@disereless" target="_blank" class="webs-links" style="color: #ff0000; text-decoration: none;">
+                            <i class="fab fa-youtube"></i> Visit My Channel for More Videos
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
         
@@ -296,11 +333,11 @@
             <div class="menu-item" data-target="tutorials">
                 <i class="menu-icon fas fa-graduation-cap"></i> TUTORIALS
             </div>
-            <div class="menu-item" data-target="saved">
-                <i class="menu-icon fas fa-save"></i> SAVED
-            </div>
             <div class="menu-item" data-target="contact">
                 <i class="menu-icon fas fa-envelope"></i> CONTACT
+            </div>
+            <div class="menu-item" data-target="youtube">
+                <i class="menu-icon fab fa-youtube"></i> MY YOUTUBE
             </div>
         </div>
 
@@ -317,10 +354,12 @@
             <div class="info-box" style="background-color: #001a00; padding: 10px; margin-bottom: 10px;">
                 <h3 class="info-title" style="font-size: 1rem;">*</h3>
                 <p>You can also follow me on instagram. all my links are in contact section</p>
-
             </div>
-            
+        </div>
+    </div>
 
     <script src="engjava.js"></script>
 </body>
 </html>
+
+
